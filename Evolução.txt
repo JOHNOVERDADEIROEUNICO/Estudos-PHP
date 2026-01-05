@@ -1,0 +1,17 @@
+O PHP surge com Rasmus Lerdorf que foi um grande colaborador também do projeto Apache e também do projeto MySQL, além disso ele era um progamador muito experiente em C.
+
+Em 94 Rasmus desevolve uma ferramenta para o seu site que servia como um curriculo online dele, com o objetivo de saber quantas pessoas visitavam seu site. O nome desta ferramneta foi Personal Home Page, note que a sigla é PHP
+
+Um ano depois essa ferramneta que já estava famosa entre muitos é lançada como PHP Tools, além disso essa ferramenta foi evoluindo, tendo funcionalidades como um interpretador de formularios, nisso o PHP ganha o nome de PHP Constructor Kit, já nessa epoca devido a sua experiencia com a linguagem C ele começa a usar comandos C dentro do PHP. Lembrando que nesse momento o PHP estava em sua primeira versão e não era uma linguagem de progamação ainda, somente uma ferramenta.
+
+Em 96 a versão 2.0 é lançada, PHP/FI, nisso o PHP começa a ter caracteristicas de uma linguagem, tendo até mesmo suporte a banco de dados e , além de funções com o usuario, nisso o PHP começa a tomar uma grande proporção com mais de 15 mil sites utilizando ele, nisso Rasmus ve que não ia conseguir manter o projeto sozinho e abre ele como open source.
+
+Nisso em 97 em uma universidade israelense 2 estudantes (Andi Gutmans e Zeev Suraski) que estavam desenvolvendo um software para lojas tiveram contato com o PHP nisso ao entrarem em contato com o Rasmus eles começam a colaborar com o projeto.
+
+Em 98 os dois reescrevem o código do PHP para que ele se torne uma linguagem de fato, nisso vem o PHP3 e agora sim ele é uma linguagem de progamação. Nisso o PHP muda de nome, afinal ele não era mais um Personal Home Page, é ai que entra o nome sem mudar a sigla: PHP: Hypertext Preprocessor.
+
+Ainda em 98 entra 2 artistas no projeto (Colin Viebrock e Vincent Pontier) sendo o Colin a desnvolver a logo do PHP e o Vincent o mascote clássico do PHP o elefante.
+
+Em 99 Andi e Zeev fundam a ZEND que é uma empresa que toma conta do PHP.
+
+Após isso o PHP foi evoluindo passando pelo 4 5 7 e 8.
