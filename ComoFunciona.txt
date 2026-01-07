@@ -1,0 +1,19 @@
+Como sabemos a internet funciona basicamente atravez de clientside e server-side, onde:
+
+1.Client-Side: O usuario requisita um site, video etc... de um servidor, o servidor manda uma copia dos arquivos para a máquina do cliente e o navegador que está instalado naquela maquina vai ter o trabalho de processar estes arquivos e exibir na tela.;
+
+2.Server-Side: Já no server-side o processo é semelhante com a diferença de quem vai ter o trabalho de processamento é o proprio servidor. Normalmente a máquina cliente não é capaz de executar o script daqueles arquivos, sendo assim ele precisa gerar um resultado, nisso entra o nosso PHP que vai executar o scrit, processando os daods e gerando uma cópia já processada ou pré-processada dos arquvivos que serão enviados.
+
+Claro que o PHP não é a unica tecnologia server-side porém como nossos estudos são sobre PHP, vamos focar em PHP.;
+
+Nisso começamos a entender sobre as areas da progamação, onde:
+
+1.Front-End: Vai trabalhar com as tecnologias do lado cliente, HTML, CSS e JS.;
+
+2.Back-End: Vai trabalhar com as tecnologias do server-side, PHP e etc...;
+
+3.Full-Stack: Profissionais qualificados para trabalhar em ambas areas.;
+
+Somente o PHP é Server-Side?
+
+*Não também temos o .Net da microsoft, JSP, SSJS, JUNGLE, RUBIE e por aí vai... Alguns destes frameworks citados acima, como o ,Net, JSP, JUNGLE, por exemplo, tem a função de adaptar uma linguagem como C#, Python, Java, para trabalhar com servidores, já o PHP foi desenvolvido pensando justamnete nos servidores, essa é a diferença.;

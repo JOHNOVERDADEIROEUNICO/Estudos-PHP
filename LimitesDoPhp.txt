@@ -1,0 +1,5 @@
+1.PHP é ótimo para criação de blogs e sites, lojas onlin, Plataformas online.;
+
+2.PHP não foi feito mas pode ser usado(Existem soluções muito melhores) para criar sistemas, como exemplo um windows da vida, criação de jogos, aplicativos.;
+
+*Uma linguagem é uma ferramenta, porém nenhuma ferramenta serve para tudo.;
