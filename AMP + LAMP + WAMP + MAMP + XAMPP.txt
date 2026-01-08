@@ -1,0 +1,13 @@
+1AMP: A junção de Apache(Intermediário entre servidores e navegadores, processando solicitações HTTP para entregar conteúdo de sites.Ou seja um servidor web.), MySQL e PHP.;
+
+2.LAMP: A junção de Linux, Apache, MySQL e PHP.;
+
+3.WAMP: A junção de Windows, Apache, MySQL e PHP.;
+
+4.MAMP: A junção de MacOS, Apache, MySQL e PHP.;
+
+5.XAMPP: O X significa coringa, ou seja roda em qualuqer sistema operacional, AMP é a sequência que a gente já sabe e o P final é de Perl, outra linguagem para server side.;
+
+Além destes temos diversas soluções server side como WampServer, Laragon, MAMP, AMPPS, EasyPHP e etc....;
+
+Todas essas soluções são softwares server sides. Vamos ao longo destes estudos utilizar o XAMPP.;
