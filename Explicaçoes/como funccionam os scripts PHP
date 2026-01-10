@@ -1,0 +1,19 @@
+Como sabemos o PHP tem uma conexão muito forte com o HTML, tanto que uma das primeiras maneiras de se incorporar um código PHP era atrvez da tag script do HTML e seu funcionamento neste estado de incorporamento é idêntico ao JS.
+
+Hoje em dia a linguagem evoluiu e a linguagem é incorporada em HTML de outra maneira usando a famosa super tag '<?php    (conteúdo)   ?>'
+
+Também temos a Short Open Tag '<?  (conteúdo)  ?>' bem semlhante a super tag.
+
+Também temos a ASP tag que era a tag que a microsoft definiu para usar ASP e o PHP também usava '<% (conteúdo) %>
+
+Por último temos a short tag PHP que quando temos uma unica linha de comando, especificamente o comando echo que é o print do PHP podemos fazer desta forma: '<?= (conteúdo) ?>'.
+
+Hoje é mais recomendado usar a super tag.
+
+Curiosidade: vimos recentemente o uso do phpInfo que retorna os dados do servidor e da versao atual do php, curiosamente ao inspecionarmos vamos ver que ele em um unico comando pussi muitas tags html trabalhando por detrás, como isso é possível?
+
+vamos imaginar que tenho um código em um servidor de um site, lá vamos ter a parte HTML e a parte PHP, como vimos o PHP fica dentro da super tag, o proprio compilador percebe a diferença do código PHP para o código HTML e pré-processa tudo que estiver dentro da super tag antes de enviar a maquina usuario, ao enviar para maquina usuario a maquina só vai processar o que estiver fora da super tag, assim quando usamos aquele método 'phpinfo()' ele já vem com um código gigante HTML já pré--processado. 
+
+Além disso vale ressaltar que os comando PHP são substituidos por código HTML após seu processamento, a exemplo um comando echo="" vai virar um <p> na tela do usuario.
+
+Do mesmo modo o método phpinfo() vai se transformar em uma tabela gigante estilizada com as informações do servidor e da versão atual que está sendo utilizada ali.
