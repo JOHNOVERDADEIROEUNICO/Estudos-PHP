@@ -1,0 +1,25 @@
+Em PHP temos 4 formatos de strings:
+
+1.Double quoted: aspas duplas ( "" );
+
+2.Single quoted: aspas simples ( '' );
+
+*Diferença entre aspas simples e duplas em PHP está na capacidade das aspas duplas de interpretar o que está dentro dela, exemplo: "PHP \u{1F418}", este comando maluco é uma sequência de escape que irá gerar um emoji de elefante na tela, se fizermos o mesmo com aspas simples ele não será capaz de entender que aquela sequência de caracteres é uma sequência de escape.
+
+3.Heredoc: bem chatinho de fazer mas, ela da a condição da formatação ser indêntica a maneira que você escrever, exemplo na pasta strings em php.;
+
+4.Nowdoc: Semelhante a heredoc, porém a palavra indentificador quando definida vai usar aspas simples, ou seja ela não vai aceitar comandos e  variáveis dentro dela.;
+
+Já para concatenar usa_se o '.' (ponto) que tem a função de juntar dois elementos ou mais. Normalmente em outras linguagens como sabemos usa_se o '+'.
+
+Escape sequences são comandos que podem ser feitos dentro de uma string de aspas duplas para quebrar linhas, adicionar elementos como emojis, aspas e por ai vai... vamos ver algumas delas:
+
+1.\n: Quebra linha;
+
+2.\t: Tabulação horizontal(é como se eu desse um tab);
+
+3.\\: Barra invertida(como você já percebeu um \ se refere a uma sequência de escap 2 \\ você indica que você quer exibir um \ na tela.)
+
+4.\$: Sinal de ccifrão(do mesmo modo do anterior, este irá mostrar o cifrão na tela.)
+
+5.\u{}: Codepoint Unicode(esta sequência unida a um codigo entre as chaves mostra um simbolo ou emoji.)
