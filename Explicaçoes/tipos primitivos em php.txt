@@ -1,0 +1,6 @@
+Dentro do PHP temos 3 tipos primitivos: Escalares, Compostos e Especiais
+
+1.Escalares: strings, int ou integer, float ou double ou real(real já não é mais usada (Como sabemos os tipos decimais são diferentes de cada um podendo suportar mais ou menos casas decimais em linguagens de progamação, no caso do PHP não tem diferença, ambas comportam o mesmo tamanho)), boolean ou bool.
+
+curiosidade: os valores int não só de números inteiros mais também de base hexadecimal, números representados por potência são representados por double.;
+

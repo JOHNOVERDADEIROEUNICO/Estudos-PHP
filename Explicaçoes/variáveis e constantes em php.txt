@@ -1,0 +1,7 @@
+Toda variável em PHP começa com um '$', exemplo: '$nome = "John Peter";'
+
+Assim como no JS temos as const que é um nome indentificador que após sua declaração não pode ser mudado, diferente das variáveis.
+
+Para variáveis dê preferência a letras minúsculas, enquanto para constantes maiúsculas e em ambas snake_case.
+
+Para caso de métodos e atributos camelCase.
