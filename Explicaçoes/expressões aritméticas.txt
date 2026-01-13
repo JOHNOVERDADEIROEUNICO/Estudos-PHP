@@ -1,0 +1,41 @@
+Antes de vermos cada operador uma curiosidade:
+
+Como sabemos toda linguagem quando fazemos isso: "2" + "2" vai dar "22", certo? porém no PHP é diferente, ele reconhece que dentro da string são numeros e transforma em 4 do tipo int, mas isto so ocorre se usarmos o operador de '+', ou seja quando uso o sinal de mais ele entende que eu não quero concatenar e sim somar, afinal o operador de concatenação é o '.', o curioso é que em outras linguagens o normal é o sinal de '+' em strings servir como concatenador também, então se eu usar o sinal de '+' pra somar uma string que não é númerica ele retorna erro, no PHP antigo ele retornava 0.
+
+Agora vamos aos operadores básicos:
+
++: Soma;
+
+-: Subtração;
+
+*: Multiplicação;
+
+/: Divisão;
+
+%: Modulo(resto da divisão);
+
+**: Exponenciação
+
+Assim como as outras linguagens o PHP possuí a ordem de precedência, acho que não preciso repetir aqui né.
+
+O PHP não possui outros operadores além destes, então para resolver raizes, sen, cos, etc... usa_se funções aritiméticas, vamos a algumas delas:
+
+1.abs(): Valor absoluto(valor sem um sinal);
+
+2.base_convert(): bases númericas, exemplo: (254, 10, 8) ou seja o numero, a base dele e a base que você deseja converter.;
+
+ceil(), floor(), round(): arredonda pra cima, arredonda pra baixo e arredondamento padrão aritmetico.;
+
+hypot(): hypotenusa.;
+
+intdiv(): divisão inteira (retorna o quociente, ou seja o resultado da divisão).;
+
+min(), max(): retorna o minimo e o outro maximo de uma sequência de números.;
+
+pi() ou M_PI: a função ou a constante retornam o valor de pi.;
+
+pow(): servia para exponenciação mas hoje temos o sinal **.;
+
+sin(), cos(), tan(): sen, cos, tan você sabe..;
+
+sqrt(): raiz quadrada.(Se quiser a raiz cubica ou maior ai teria que montar a continha, ex: 22**(1/3));
