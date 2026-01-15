@@ -14,7 +14,7 @@ Já para concatenar usa_se o '.' (ponto) que tem a função de juntar dois eleme
 
 Escape sequences são comandos que podem ser feitos dentro de uma string de aspas duplas para quebrar linhas, adicionar elementos como emojis, aspas e por ai vai... vamos ver algumas delas:
 
-1.\n: Quebra linha;
+1.\n: Quebra linha (OBS: no caso das quebras de linha elas não estão funcionando, prefira usar a tag <br> dentro do echo.);
 
 2.\t: Tabulação horizontal(é como se eu desse um tab);
 
