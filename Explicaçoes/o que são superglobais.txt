@@ -1,0 +1,148 @@
+Até então já vimos 3 superglobais $_GET, $_POST e $_REQUEST, todas essas geram vetores associativos que serão enviados via http, url para uma próxima página ou servidor.
+
+algumas informações sobre cada:
+
+1.$_GET: é um vetor que recebe dados diretamente da url, obviamente dados sensiveis não são recomendáveis por aqui.
+
+Essas informações são enviadas pelo o que chamamos de query string, que é justamnete uma parte da url que é usada para enviar dados pela url, a query string começa depois do ? e é compsta por pares 'chave=valor' e são separados por &.
+
+Exemplo: https://site.com/produtos?categoria=tenis&ordem=preco
+
+🧠 Para que serve?
+
+A query string é usada para:
+
+Filtros (categoria, preço, cor)
+
+Paginação (?page=2)
+
+Buscas (?q=notebook)
+
+Ordenação de dados
+
+Envio de dados via GET
+
+Além do php, ela é usada também em outras linguagens veja exemplos:
+
+1.JS: const params = new URLSearchParams(window.location.search);
+console.log(params.get("categoria"));
+
+2.C# (ASP.NET): const params = new URLSearchParams(window.location.search);
+console.log(params.get("categoria"));
+
+3.PHP: $_GET["categoria"];
+;
+
+2.$_POST: Tmabém é um vetor, porém perceba que os dados não são pegos por url. Mesmo assim ainda não são seguros para dados sensiveis pois eles podem serem facilmente encontrados no inspecionar.
+
+Agora se não são enviados via url, por onde são então? Eles são enviados no corpo da requisição HTTP(request body), Exemplo:
+
+POST /login HTTP/1.1
+Host: site.com
+Content-Type: application/x-www-form-urlencoded
+
+usuario=joao&senha=1234
+
+Note que logo após os headers do HTTP estão os dados.
+
+🧾 Tipos de envio no POST (Content-Type)
+1️⃣ application/x-www-form-urlencoded (padrão de forms):
+
+usuario=joao&senha=1234
+;
+
+2️⃣ multipart/form-data (upload de arquivos):
+
+------boundary
+Content-Disposition: form-data; name="arquivo"
+;
+
+3️⃣ application/json (APIs modernas):
+
+{
+  "usuario": "joao",
+  "senha": "1234"
+}
+;
+
+🔐 POST é seguro?
+
+⚠️ Mais seguro que GET, mas não “seguro por si só”
+
+❌ Os dados ainda podem ser interceptados sem HTTPS
+
+✅ Com HTTPS, os dados vão criptografados
+
+❌ Ainda podem ser vistos no servidor, logs etc.
+
+➡️ Nunca confie só no método POST para segurança
+
+Exemplo de como os dados são lidos em cada linguagem:
+1.JavaScript (Node / Express): req.body.usuario
+;
+
+2.C# (ASP.NET): Request.Form["usuario"];
+
+3.PHP: $_POST["usuario"];
+
+🧠 Analogia rápida
+
+GET → dados no “endereço do envelope”
+
+POST → dados dentro da “carta”;
+
+3.$_REQUEST: Também um array, porém ele vai juntar em um único array dados get e post(sim é possível ter o envio dos dois tipos), ou seja URL(query string), headers e body são enviados ao mesmo array.
+
+🤝 Como o servidor “junta” isso?
+
+O servidor web (Kestrel, Apache, Nginx, etc.):
+
+Recebe a requisição HTTP “crua”
+
+Quebra cada parte
+
+Organiza tudo em um objeto Request
+
+Entrega esse objeto para sua aplicação.
+
+🧠 O Request vira um objeto organizado
+Exemplo conceitual, exemplo:
+Request
+├── Method      → POST
+├── Path        → /login
+├── Query       → { categoria: "tenis", page: "2" }
+├── Headers     → { Content-Type, Host, User-Agent }
+├── Body        → { usuario: "joao", senha: "123" }
+
+Veja exemplo de como cada linguagem o recebe:
+1.JS: req.query.categoria   // query string
+req.body.usuario      // body (POST)
+req.headers["host"]   // headers
+;
+
+2.C#(ASP.NET): Request.Method
+Request.Query["categoria"]
+Request.Form["usuario"]
+Request.Headers["Content-Type"]
+;
+
+3.PHP: $_GET["categoria"];   // query
+$_POST["usuario"];    // body
+$_SERVER["REQUEST_METHOD"]
+;
+;
+
+Vamos ver outras superglobais agora: 
+
+1.$_COOKIE: Vai trabalhar com dados tipo cookie que:
+"Cookies são pequenas variaveis que são guardadas dentro do navegador.";
+
+2.$_FILES: Atravez do upload de arquivos ele consegue pegar os dados de um arquivo.;
+
+3.$_SESSION: Permite que variaveis de sessão ou seja variaveis que são utilizadas de páginas pra páginas possam ser utilizadas.;
+
+4.$_ENV: variaveis de ambiente do servidor.;
+
+5.$_SERVER: ;
+
+6.$GLOBALS: Esta super global engloba todas as outras juntas, o que pode causar confusão, além disso perceba que ela não possui anderline na sua sintaxe.
