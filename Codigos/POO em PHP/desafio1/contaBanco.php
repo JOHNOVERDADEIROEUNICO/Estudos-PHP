@@ -61,13 +61,28 @@
             }
         }
 
-        public function PaagarMensal(){
+        public function PagarMensal(){
+            if ($this -> getTipo() == "CC"){
+                $v = 12;
+            }
+            else if($this -> getTipo() == "CP"){
+                $v = 20;
+            }
+
+            if ($this -> getStatus() == true){
+                $this -> setSaldo($this -> getSaldo() - $v);
+            }
+            else{
+                echo "<p>Sua conta esta fechada.</p>";
+            }
 
         }
 
         //Construtor
         public function __construct(){
-            
+            $this -> setSaldo(0);
+
+            $this -> setStatus(false);
         }
         //Getters
         public function getNumConta(){
