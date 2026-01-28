@@ -6,8 +6,22 @@
     <title>Controle remoto</title>
 </head>
 <body>
+    <h1>Projeto Controle Remoto</h1>
     <?php 
-    
+        require_once "contorleRemoto.php";
+
+        $c = new ContorleRemoto();
+
+        $c -> Ligar();
+        $c -> MaisVolume();
+        $c -> abrirMenu();
+
+        $c -> Ligar();
+        $c -> MenosVolume();
+        $c -> abrirMenu();
+
+        //fique a vontade para experimentar
+
     ?>
 </body>
 </html>

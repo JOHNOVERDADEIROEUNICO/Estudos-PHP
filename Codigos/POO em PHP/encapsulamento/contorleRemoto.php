@@ -8,6 +8,8 @@
 
         private $tocando;
 
+        private $mudo;
+
         //Métodos
         function __construct()
         {
@@ -16,28 +18,36 @@
             $this -> tocando = false;
         }
 
-        public function getVolume(){
+        private function getVolume(){
             return $this -> volume;
         }
 
-        public function getLigado(){
+        private function getLigado(){
             return $this -> ligado;
         }
 
-        public function getTocando(){
+        private function getTocando(){
             return $this -> tocando;
         }
 
-        public function setVolume($var){
+        private function getMudo(){
+            return $this -> mudo;
+        }
+
+        private function setVolume($var){
             $this -> volume = $var;
         }
 
-        public function setLigado($var){
+        private function setLigado($var){
             $this -> ligado = $var;
         }
 
-        public function setTocando($var){
+        private function setTocando($var){
             $this -> tocando = $var;
+        }
+
+        private function setMudo($var){
+            $this -> mudo = $var;
         }
 
 
@@ -55,9 +65,13 @@
         }
 
         public function AbrirMenu(){
-            echo "<br>Está ligado?: ". $this -> getLigado() ? "Sim" : "Não";
+            echo "<br>Está ligado?: ";
 
-            echo "<br>Está tocando?: ". $this -> getTocando() ? "Sim" : "Não";
+            echo $this -> getLigado() ? "Sim" : "Não";
+
+            echo "<br>Está tocando?: ";
+
+            echo $this -> getTocando() ? "Sim" : "Não";
 
             echo "<br>Voume: ". $this -> getVolume();
 
@@ -74,7 +88,7 @@
 
         public function MaisVolume(){
             if($this -> getLigado() == true and $this -> getVolume() < 100){
-                $this -> setVolume($this -> getVolume() + 1);
+                $this -> setVolume($this -> getVolume() + 5);
             }
             else if($this -> getLigado() == true and $this -> getVolume() == 100){
                 echo "Volume: ". $this -> getVolume();
@@ -85,23 +99,68 @@
         }
 
         public function MenosVolume(){
-
+            if($this -> getLigado() == true and $this -> getVolume() < 100){
+                $this -> setVolume($this -> getVolume() - 5);
+            }
+            else if($this -> getLigado() == true and $this -> getVolume() == 0){
+                echo "Volume: ". $this -> getVolume();
+            }
+            else if($this -> getLigado() == false){
+                echo "Som desligado.";
+            }
         }
 
         public function LigarMudo(){
-
+            if ($this -> getLigado() == true){
+                $this -> setVolume(0); 
+                $this -> setMudo(true);
+            }
+            else{
+                echo "Som desligado.";
+            }
         }
 
         public function DesligarMudo(){
+            if ($this -> getLigado() == true and $this -> getMudo() == true){
+                $this -> setVolume(50); 
+                $this -> setMudo(false);
 
+                echo "Volume: ". $this -> getVolume();
+            }
+            else if($this -> getLigado() == true and $this -> getMudo() == false){
+                echo "Volume: ". $this -> getVolume();
+            }
+            else if($this -> getLigado() == false){
+                echo "Som desligado.";
+            }
         }
 
         public function Play(){
+            if($this -> getLigado() == true and $this -> getTocando() == false){
+                $this -> setTocando(true);
 
+                echo "Tocando musica..";
+            }
+            else if($this -> getLigado() == true and $this -> getTocando() == true){
+                echo "O som já está tocando";
+            }
+            else if($this -> getLigado() == false){
+                echo "O som está desligado.";
+            }
         }
 
         public function Pause(){
+            if($this -> getLigado() == true && $this -> getTocando() == true){
+                $this -> setTocando(false);
 
+                echo "Musica pausada.";
+            }
+            else if($this -> getLigado() == true and $this -> getTocando() == false){
+                echo "Não a som tocando.";
+            }
+            else if($this -> getLigado() == false){
+                echo "O som está desligado.";
+            }
         }
     }
 ?>
