@@ -56,9 +56,25 @@
         }
         private function setPeso($var){
             $this -> peso = $var;
+
+            $this -> setCategoria();
         }
-        private function setCategoria($var){
-            $this -> categoria = $var;
+        private function setCategoria(){
+            if ($this -> getPeso() < 52.2){
+                $this -> categoria = "Invalido";
+            }
+            else if ($this -> getPeso() <= 70.3){
+                $this -> categoria = "Leve";
+            }
+            else if ($this -> getPeso() <= 83.9){
+                $this -> categoria = "Medio";
+            }
+            else if ($this -> getPeso() <= 120.2){
+                $this -> categoria = "Pesado";
+            }
+            else {
+                $this -> categoria = "Invalido";
+            }
         }
         private function setVitorias($var){
             $this -> vitorias += $var;
@@ -71,14 +87,13 @@
         }
 
         //Construtor
-        public function __construct($n, $na, $i, $al, $pes, $cat, $vic, $loss, $draw)
+        public function __construct($n, $na, $i, $al, $pes, $vic, $loss, $draw)
         {
             $this -> setNome($n);
             $this -> setNacionalidade($na);
             $this -> setIdade($i);
             $this -> setAltura($al);
             $this -> setPeso($pes);
-            $this -> setCategoria($cat);
             $this -> setVitorias($vic);
             $this -> setDerrotas($loss);
             $this -> setEmpates($draw);
@@ -90,7 +105,7 @@
 
             echo "<p>This is the moment you've all been waiting for! Live! IIIIIIIIIIIIII t's TIIIIIime!</p>";
 
-            echo "<p>Introducing first, fighting out of the blue/red corner... weighing {$this -> getPeso()} from {$this -> getCategoria()}category, with{$this -> getAltura()}</p>, from {$this -> getNacionalidade()} The One, The Only, {$this -> getNome()}";
+            echo "<p>Introducing first, fighting out of the blue/red corner... weighing {$this -> getPeso()}kg from {$this -> getCategoria()} category, with {$this -> getAltura()}</p>, from {$this -> getNacionalidade()} The One, The Only, {$this -> getNome()}";
         }
         public function Status(){
             echo "<p>O lutador {$this -> getNome()} possui: </p>";
