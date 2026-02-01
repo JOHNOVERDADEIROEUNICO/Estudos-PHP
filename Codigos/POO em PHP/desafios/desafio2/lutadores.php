@@ -13,28 +13,28 @@
 
         //metodos especiais
         //Getters
-        private function getNome(){
+        public function getNome(){
             return $this ->  nome;
         }
-        private function getNacionalidade(){
+        public function getNacionalidade(){
             return $this ->  nacionalidade;
         }
-        private function getIdade(){
+        public function getIdade(){
             return $this ->  idade;
         }
-        private function getPeso(){
+        public function getPeso(){
             return $this ->  peso;
         }
-        private function getCategoria(){
+        public function getCategoria(){
             return $this -> categoria ;
         }
-        private function getAltura(){
+        public function getAltura(){
             return $this ->  altura;
         }
-        private function getVitorias(){
+        public function getVitorias(){
             return $this ->  vitorias;
         }
-        private function getDerrotas(){
+        public function getDerrotas(){
             return $this ->  derrotas;
         }
         private function getEmpates(){
@@ -125,33 +125,5 @@
         public function EmpatarLuta(){
             $this -> setEmpates(1);
         }
-        public function Lutar(object $l1, object $l2){
-            $quemVenceu = mt_rand(1, 3);
-
-            if  ($l1 -> getCategoria() === $l2 -> getCategoria() && $l1-> getPeso() === $l2-> getPeso()){
-                if ($quemVenceu == 1){
-                    $l1 -> GanharLuta();
-
-                    $l2 -> PerderLuta();
-                }
-                else if ($quemVenceu == 2){
-                    $l1 -> PerderLuta();
-
-                    $l2 -> GanharLuta();
-                }
-                else if ($quemVenceu == 3){
-                    $l1 -> EmpatarLuta();
-
-                    $l2 -> EmpatarLuta();
-                }
-            }
-            else if ($l1 -> getCategoria() === $l2 -> getCategoria() && $l1-> getPeso()  != $l2-> getPeso()){
-                echo "<p>Um dos lutadores não bateu o peso.</p>";
-            }
-            else if ($l1 -> getCategoria() != $l2 -> getCategoria()){
-                echo "<p>Os lutadores são de categorias diferentes.</p>";
-            }
-        }
-
     }
 ?>
